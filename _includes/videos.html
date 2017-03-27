@@ -1,0 +1,48 @@
+<section class="bg-black" id="videos">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="section-heading text-center">Latest videos</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="no-padding" id="portfolio">
+    <div class="container-fluid">
+        <div class="row no-gutter">
+          {% for post in site.posts limit: 3 %}
+            <div class="col-lg-4 col-sm-6">
+                <a href="{{post.link}}" class="portfolio-box">
+                    <img src="{{post.thumbnail}}" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                {{post.category}}
+                            </div>
+                            <div class="project-name">
+                                {{post.title}}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="bg-black-bottom" id="videos">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="text-center">
+                <a href="https://www.youtube.com/channel/UCVzMry2PfkaisRTrgLef4jw" class="btn-border btn-nobg btn-xl">Show more!</a>
+                <a href="http://www.youtube.com/channel/UCVzMry2PfkaisRTrgLef4jw?sub_confirmation=1
+
+" class="btn btn-default btn-xl">Subscribe!</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
